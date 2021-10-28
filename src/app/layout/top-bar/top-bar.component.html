@@ -4,19 +4,19 @@
     </div>
     <div class="right">
         <div class="butt">
-            <button (click)="router('home')">home</button>
+            <button (click)="routTo('home')">home</button>
             <div [ngClass]="{lineOn: page == 'home', noDisplay: page != 'home'}"></div>
         </div>
         <div class="butt">
-            <button (click)="router('about')">about</button>
+            <button (click)="routTo('about')">about</button>
             <div [ngClass]="{lineOn: page == 'about', noDisplay: page != 'about'}"></div>
         </div>
         <div class="butt">
-            <button (click)="router('projects')">projects</button>
+            <button (click)="routTo('projects')">projects</button>
             <div [ngClass]="{lineOn: page == 'projects', noDisplay: page != 'projects'}"></div>
         </div>
         <div class="butt">
-            <button (click)="router('contact')">contact</button>
+            <button (click)="routTo('contact')">contact</button>
             <div [ngClass]="{lineOn: page == 'contact', noDisplay: page != 'contact'}"></div>
         </div>
     </div>

@@ -5,7 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
 const components = [
-  LayoutComponent
+  LayoutComponent,
+  TopBarComponent
 ]
 
 const modules = [
@@ -14,7 +15,7 @@ const modules = [
 ]
 
 @NgModule({
-  declarations: [...components, TopBarComponent],
+  declarations: [...components],
   imports: [...modules],
   exports: []
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
@@ -12,13 +13,15 @@ export class TopBarComponent implements OnInit {
     | 'projects'
     | 'contact' = 'home'
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  router(route:any){
+  routTo(route:any){
     this.page = route
-    console.log(route)
+    this.router.navigateByUrl("layout/"+route)
   }
 }
