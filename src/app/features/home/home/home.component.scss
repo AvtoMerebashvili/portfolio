@@ -1,11 +1,48 @@
 @import '../../../../styles/palette.scss';
 
 .component{
-    background-color: $bg-color1;
     height: 100%;
     width: 100%;
-    p{
-        color: white;
-        margin: 0;
+    padding: 2%;
+    .content{
+        width: 80%;
+        height: 50%;
+        margin: 8% auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .writens{
+            width: 45%;
+            margin-top: 20px;
+            h1{
+                color: $font;
+                text-align: center;
+                font-size: 35px
+            }
+            p{
+                width: 70%;
+                color: $font;
+                margin: 0;
+                text-align: center;
+                margin: 0 auto;
+                &:first-child{
+                    font-size: 25px;
+                }
+            }
+            .icons{
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+                margin: 20px auto;
+                i{
+                    font-size: 20px;
+                    color: $light-blue;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
