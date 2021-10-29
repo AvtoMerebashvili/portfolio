@@ -1,18 +1,14 @@
+@import "../../styles/palette.scss";
+
 .component{
     display: flex;
     flex-direction: column;
-    // min-height: 100vh;
-    // background-image: url('https://wallpaperaccess.com/full/1363250.jpg');
-    background-color: #18191a;
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
+    height: 100vh;
     .top{
         background-color: inherit;
-        backdrop-filter: blur(5px);
     }
     .down{
         height: 100%;
-        backdrop-filter: blur(5px);
     }
     .foot{
         height: 10%;
@@ -22,5 +18,18 @@
         justify-content: center;
         color: white;
         backdrop-filter: blur(5px);
+    }
+}
+
+.whiteTheme{
+    background-color: $bg-color2;
+    .foot{
+        color: $font2;
+    }
+}
+.darkTheme{
+    background-color: $bg-color1;
+    .foot{
+        color: $font1;
     }
 }

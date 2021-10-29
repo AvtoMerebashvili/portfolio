@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+ 
+  get theme(){
+    return this.themeService.theme
+  }
 
-  constructor() { }
+  constructor(
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -1,6 +1,6 @@
-<div class="component">
+<div class="component" [ngClass]="{'whiteTheme': theme, 'darkTheme': !theme}">
     <div class="top">
-        <app-top-bar></app-top-bar>
+        <app-top-bar (Theme)="setTheme($event)"></app-top-bar>
     </div>
     <div class="down">
         <router-outlet></router-outlet>

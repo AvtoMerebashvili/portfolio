@@ -1,4 +1,4 @@
-<div class="component">
+<div class="component" [ngClass]="{'whiteTheme': theme, 'darkTheme': !theme}">
     <div class="place">
        <div class="left">
             <p>A.M</p>
@@ -15,6 +15,14 @@
             <div class="butt">
                 <button (click)="routTo('projects')">Projects</button>
                 <div [ngClass]="{lineOn: page == 'projects', noDisplay: page != 'projects'}"></div>
+            </div>
+            <div class="butt">
+                <button (click)="throwTheme()">
+                    <div class="icon">
+                        <i class="fas fa-sun" *ngIf="!theme"></i>
+                        <i class="fas fa-moon" *ngIf="theme"></i>
+                    </div>
+                </button>
             </div>
         </div> 
     </div>

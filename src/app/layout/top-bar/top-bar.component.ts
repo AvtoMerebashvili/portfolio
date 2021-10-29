@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,11 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./top-bar.component.scss']
 })
 export class TopBarComponent implements OnInit {
+  
+  public theme:boolean  = false;
   public page: 
     | 'home' 
     | 'about'
     | 'projects'
     | 'contact' = 'home'
+
+
+  @Output() Theme = new EventEmitter();
 
   constructor(
     private router: Router
@@ -23,5 +28,10 @@ export class TopBarComponent implements OnInit {
   routTo(route:any){
     this.page = route
     this.router.navigateByUrl("layout/"+route)
+  }
+
+  throwTheme(){
+    this.theme = !this.theme
+    this.Theme.emit(this.theme);
   }
 }

@@ -10,19 +10,16 @@
         margin: 8% auto;
         display: flex;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center;    
         .writens{
             width: 45%;
             margin-top: 20px;
             h1{
-                color: $font;
                 text-align: center;
                 font-size: 35px
             }
             p{
                 width: 70%;
-                color: $font;
                 margin: 0;
                 text-align: center;
                 margin: 0 auto;
@@ -44,5 +41,17 @@
                 }
             }
         }
+    }
+}
+
+.whiteTheme{
+    h1,p{
+        color: $font2;
+    }
+}
+
+.darkTheme{
+    h1,p{
+        color: $font1;
     }
 }
