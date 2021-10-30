@@ -12,8 +12,7 @@ export class TopBarComponent implements OnInit {
   public page: 
     | 'home' 
     | 'about'
-    | 'projects'
-    | 'contact' = 'home'
+    | 'projects' = 'home'
 
 
   @Output() Theme = new EventEmitter();
@@ -23,6 +22,13 @@ export class TopBarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if(this.router.routerState.snapshot.url == '/layout/home'){
+      this.page = 'home'
+    }else if(this.router.routerState.snapshot.url == '/layout/about'){
+      this.page = 'about'
+    }else{
+      this.page = 'projects'
+    }
   }
 
   routTo(route:any){

@@ -11,7 +11,7 @@ export class LayoutComponent implements OnInit {
   theme: boolean = false
 
   constructor(
-    private themeServise: ThemeService
+    private themeService: ThemeService
   ) { }
 
   ngOnInit(): void {
@@ -19,6 +19,6 @@ export class LayoutComponent implements OnInit {
 
   setTheme(prop: boolean){
     this.theme = prop
-    this.themeServise.setTheme(prop)
+    this.themeService.setTheme(prop)
   }
 }

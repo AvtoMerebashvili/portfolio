@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AboutRoutingModule } from './about-routing.module';
 
 
 
@@ -10,7 +10,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     AboutComponent
   ],
   imports: [
-    SharedModule
+    SharedModule,
+    AboutRoutingModule
   ]
 })
 export class AboutModule { }
