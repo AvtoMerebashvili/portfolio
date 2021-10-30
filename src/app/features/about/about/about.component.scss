@@ -1,5 +1,37 @@
+@import '../../../../styles/palette.scss';
+
 .component{
-    width: 500px;
-    height: 500px;
-    background-color: red;
+    width: 50%;
+    margin: 50px auto;
+    background-color: inherit;
+    h3,p,h1{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h3{
+        color: $font3;
+        font-size: 24px;
+    }
+    h1{
+        font-size: 37px;
+    }
+    p{
+        a{
+            color: $font3-dark;
+        }
+    }
+}
+
+.darkTheme{
+    h1{
+        color: $font1;
+    }
+    p{
+       color: $font1; 
+    }
+}
+
+.whiteTheme{
+    h1,p{
+        color: $font2;
+    }
 }

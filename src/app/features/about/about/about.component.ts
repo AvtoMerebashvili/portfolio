@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/shared/services/theme.service';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  get theme(){
+    return this.themeService.theme
+  }
+
+  constructor(
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit(): void {
   }
