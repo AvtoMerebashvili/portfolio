@@ -1,0 +1,30 @@
+@import '../../../../styles/palette.scss';
+@import '../styles/toggle.scss';
+
+.normalOff {
+  @include toggle;
+  .toggle {
+    background-color: gray;
+    justify-content: flex-start;
+    .round {
+      background-color: yellow;
+    }
+  }
+  p {
+    color: black;
+  }
+}
+
+.normalOn {
+  @include toggle;
+  .toggle {
+    background-color: gray;
+    justify-content: flex-end;
+    .round {
+      background-color: #fff;
+    }
+  }
+  p {
+    color: black;
+  }
+}

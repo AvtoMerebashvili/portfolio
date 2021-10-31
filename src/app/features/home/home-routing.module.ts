@@ -7,6 +7,11 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: HomeComponent
+  },
+  {
+    path:'email',
+    loadChildren: () => import('../send-email/send-email.module')
+      .then(m => m.SendEmailModule)
   }
 ]
 
