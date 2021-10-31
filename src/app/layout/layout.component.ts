@@ -7,7 +7,8 @@ import { ThemeService } from '../shared/services/theme.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-
+  
+  year: number = new Date().getFullYear()
   theme: boolean = false
 
   constructor(

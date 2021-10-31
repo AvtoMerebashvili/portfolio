@@ -14,11 +14,21 @@
         width: 84%;
         height: 100%;
         margin-left: 5%;
-        p{
-            font-family: Montserrat,sans-serif;
-            font-weight: 400;
-            font-size: 18px;
+        .left{
+            width: 40px;
+            height: 40px;
+            border: 1px solid $font3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-family: Montserrat,sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+            }
         }
+        
         .right{
             width: 22%;
             min-width: fit-content;
