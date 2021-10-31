@@ -6,9 +6,9 @@
     padding: 2%;
     .content{
         width: 80%;
-        height: 50%;
         margin: 8% auto;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;    
         .writens{
@@ -42,6 +42,14 @@
                     }
                 }
             }
+        }
+        .mailer{
+            width: 360px;
+            height: 365px;
+            position: absolute;
+            right: 20px;
+            bottom: 62px;
+            background-color: red;
         }
     }
 }

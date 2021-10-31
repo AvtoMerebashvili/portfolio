@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { SendEmailComponent } from './send-email/send-email.component';
-import { SendEmailRoutingModule } from './send-email-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -9,7 +8,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     SharedModule,
-    SendEmailRoutingModule
+  ],
+  exports: [
+    SendEmailComponent
   ]
 })
 export class SendEmailModule { }

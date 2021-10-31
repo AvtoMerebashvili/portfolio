@@ -1,8 +1,11 @@
 <div class="component">
-    <form action="">
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="Subject">
-        <textarea placeholder="Text..." cols="30" rows="10"></textarea>    
-        <app-toggle class="toggle" toggleType="normal" (toggled)="log($event)"></app-toggle>
+    <form action="" [formGroup]="form" >
+        <input type="text" placeholder="Email" formControlName="mail">
+        <input type="text" placeholder="Subject" formControlName="subject">
+        <textarea placeholder="Text..." cols="30" rows="10" formControlName="text"></textarea>    
+        <div class="send">
+            <app-toggle class="toggle" textColor="white" toggleType="normal" text="Mail Is Real" (toggled)="setToggle($event)" ></app-toggle>
+            <input type="submit">
+        </div>
     </form>
 </div>

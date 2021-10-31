@@ -10,6 +10,7 @@
       align-items: center;
       padding: 0 4px 0 4px;
       transition: 0.3s;
+      background-color: $input-bg1;
       input {
         display: none;
       }
@@ -26,6 +27,7 @@
     p {
       transition: 0.3s;
       margin-left: 19px;
+      color: black;
     }
-  }
+}
   

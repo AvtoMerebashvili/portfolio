@@ -4,27 +4,19 @@
 .normalOff {
   @include toggle;
   .toggle {
-    background-color: gray;
     justify-content: flex-start;
-    .round {
-      background-color: yellow;
+    .round{
+      background-color: $lighli-gray;
     }
-  }
-  p {
-    color: black;
   }
 }
 
 .normalOn {
   @include toggle;
   .toggle {
-    background-color: gray;
     justify-content: flex-end;
-    .round {
-      background-color: #fff;
+    .round{
+      background-color: $light-gray;
     }
-  }
-  p {
-    color: black;
   }
 }

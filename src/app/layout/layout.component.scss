@@ -9,6 +9,31 @@
     }
     .down{
         height: 100%;
+        .mailer{
+            width: 360px;
+            height: 365px;
+            position: absolute;
+            right: 20px;
+            bottom: 62px;
+            background-color: $bg-color5;
+            .topBar{
+                width: 100%;
+                height: 46px;
+                display: flex;
+                justify-content: flex-end;
+                button{
+                    background-color: inherit;
+                    border: none;
+                    width: 20px;   
+                    margin-right: 16px;
+                    font-size: 18px;
+                    color: $light-blue;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
     .foot{
         height: 10%;

@@ -15,7 +15,8 @@ export class ToggleComponent implements OnInit {
   toggle = new FormControl();
 
   @Input() text = '';
-  @Input() toggleValue = true;
+  @Input() toggleValue = false;
+  @Input() textColor = 'black'
 
   @Output() toggled = new EventEmitter<boolean>();
 
@@ -33,7 +34,6 @@ export class ToggleComponent implements OnInit {
           })
         )
         .subscribe();
-
   }
 
   private setToggleValue(param: boolean) {
