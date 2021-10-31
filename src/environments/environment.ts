@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
-  URL: "localhost:3000"
+  Base_URL: "localhost:3000",
+  Mail_URL: "localhost:3001"
 };
 

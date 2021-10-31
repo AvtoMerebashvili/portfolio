@@ -1,11 +1,11 @@
 <div class="component">
-    <form action="" [formGroup]="form" >
+    <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
         <input type="text" placeholder="Email" formControlName="mail">
         <input type="text" placeholder="Subject" formControlName="subject">
         <textarea placeholder="Text..." cols="30" rows="10" formControlName="text"></textarea>    
         <div class="send">
             <app-toggle class="toggle" textColor="white" toggleType="normal" text="Mail Is Real" (toggled)="setToggle($event)" ></app-toggle>
-            <input type="submit">
+            <input type="submit" value="send">
         </div>
     </form>
 </div>
