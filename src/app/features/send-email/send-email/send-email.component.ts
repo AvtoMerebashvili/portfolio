@@ -18,14 +18,17 @@ export class SendEmailComponent implements OnInit {
   });
 
   constructor(
-    // private http: SendEmailService
+    private http: SendEmailService
   ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    // this.form.valid && this.toggled ? this.http.send(this.form.value) : alert("wrong fields")
+    this.form.valid && this.toggled ? this.http.send(this.form.value).subscribe(v => {console.log(v)}) : alert("wrong fields")
+    if(this.form.valid && this.toggled){
+      alert('sent')
+    }
   }
 
   setToggle(toggled:boolean){

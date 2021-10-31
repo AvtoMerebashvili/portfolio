@@ -6,10 +6,10 @@ import { environment } from '../../../../environments/environment'
 export class SendEmailService {
   
   constructor(
-    // private http: HttpClient
+    private http: HttpClient
   ) { }
 
   send(data:any){
-    // this.http.post(`${environment.Mail_URL}/sendmail`, data)
+    return this.http.post(`${environment.Mail_URL}sendmail`, data)
   }
 }
