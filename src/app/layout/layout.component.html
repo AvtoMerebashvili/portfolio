@@ -4,12 +4,15 @@
     </div>
     <div class="down">
         <router-outlet></router-outlet>
-        <div class="mailer">
+        <div [ngClass]="{mailerOn: mailer=='on', mailerOff: mailer=='off', mailerClosed: mailer=='closed' }">
             <div class="topBar">
-                <button><i class="fas fa-minus"></i></button>
-                <button><i class="fas fa-times"></i></button>
+                <p>avtandil.merebashvili.2@gmail.com</p>
+                <div class="buttons">
+                    <button (click)="setMailer('off')"><i class="fas fa-minus"></i></button>
+                    <button (click)="setMailer('closed')"><i class="fas fa-times"></i></button>
+                </div>
             </div>
-            <app-send-email class="s"></app-send-email>
+            <app-send-email class="sendEmail"></app-send-email>
         </div>
     </div>
     <div class="foot">

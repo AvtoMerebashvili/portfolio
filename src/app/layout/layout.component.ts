@@ -8,6 +8,11 @@ import { ThemeService } from '../shared/services/theme.service';
 })
 export class LayoutComponent implements OnInit {
   
+  mailer:
+    | 'on'
+    | 'off'
+    | 'closed' = 'on'
+
   year: number = new Date().getFullYear()
   theme: boolean = false
 
@@ -21,5 +26,9 @@ export class LayoutComponent implements OnInit {
   setTheme(prop: boolean){
     this.theme = prop
     this.themeService.setTheme(prop)
+  }
+
+  setMailer(prop: any){
+    this.mailer = prop
   }
 }
