@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from 'src/app/shared/services/theme.service';
+import { StylesService } from 'src/app/shared/services/styles.service';
 
 @Component({
   selector: 'app-about',
@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   }
 
   constructor(
-    private themeService: ThemeService
+    private themeService: StylesService
   ) { }
 
   ngOnInit(): void {

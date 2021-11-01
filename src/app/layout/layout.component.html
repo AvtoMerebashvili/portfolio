@@ -8,7 +8,8 @@
             <div class="topBar">
                 <p>avtandil.merebashvili.2@gmail.com</p>
                 <div class="buttons">
-                    <button (click)="setMailer('off')"><i class="fas fa-minus"></i></button>
+                    <button *ngIf="mailer == 'on'" (click)="setMailer('off')"><i class="fas fa-minus"></i></button>
+                    <button *ngIf="mailer == 'off'" (click)="setMailer('on')"><i class="fas fa-chevron-up"></i></button>
                     <button (click)="setMailer('closed')"><i class="fas fa-times"></i></button>
                 </div>
             </div>
@@ -20,3 +21,4 @@
         <p>{{year}} Avtandil Merebashvili - All Rights Reserved</p>
     </div>
 </div>
+

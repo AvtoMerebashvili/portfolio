@@ -14,22 +14,17 @@
             @include mailer;
             width: 360px;
             height: 365px;
-            background-color: $bg-color5;
             .topBar{
                 width: 100%;
                 height: 46px;
                 display: flex;
                 justify-content: space-between;
-                p{
-                    color: $font1;
-                }
             }
         }
         .mailerOff{
             @include mailer;
             height: 45px;
             width: 80px;
-            background-color: $bg-color5;
             .topBar{
                 p{
                     display: none;
@@ -64,17 +59,43 @@
 }
 
 
-
-
-
 .whiteTheme{
     background-color: $bg-color2;
+    .down{
+        .mailerOff{
+            background-color: $bg-color2;
+            border: 1px solid $dark-white;
+        }
+        .mailerOn{
+            background-color: $bg-color2;
+            border: 1px solid $dark-white;
+            .topBar{
+                p{
+                    color: $font2;
+                }
+            }
+        }
+    }
     .foot{
         color: $font2;
     }
 }
+
 .darkTheme{
     background-color: $bg-color1;
+    .down{
+        .mailerOff{
+            background-color: $bg-color5;
+        }
+        .mailerOn{
+            background-color: $bg-color5;
+            .topBar{
+                p{
+                    color: $font1;
+                }
+            }
+        }
+    }
     .foot{
         color: $font1;
     }

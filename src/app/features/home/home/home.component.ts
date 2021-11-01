@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from 'src/app/shared/services/theme.service';
+import { StylesService } from 'src/app/shared/services/styles.service';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +9,18 @@ import { ThemeService } from 'src/app/shared/services/theme.service';
 export class HomeComponent implements OnInit {
  
   get theme(){
-    return this.themeService.theme
+    return this.stylesService.theme
   }
 
   constructor(
-    private themeService: ThemeService
+    private stylesService: StylesService
   ) { }
 
   ngOnInit(): void {
-    
+  }
+
+  popMailer(){
+    this.stylesService.setMailer('on')
   }
 
 }

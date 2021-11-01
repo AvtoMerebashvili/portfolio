@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from '../shared/services/theme.service';
+import { StylesService } from '../shared/services/styles.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,17 +7,16 @@ import { ThemeService } from '../shared/services/theme.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-  
-  mailer:
-    | 'on'
-    | 'off'
-    | 'closed' = 'on'
+
+  get mailer(){
+    return this.stylesService.mailer 
+  }
 
   year: number = new Date().getFullYear()
   theme: boolean = false
 
   constructor(
-    private themeService: ThemeService
+    private stylesService: StylesService
   ) { }
 
   ngOnInit(): void {
@@ -25,10 +24,10 @@ export class LayoutComponent implements OnInit {
 
   setTheme(prop: boolean){
     this.theme = prop
-    this.themeService.setTheme(prop)
+    this.stylesService.setTheme(prop)
   }
 
   setMailer(prop: any){
-    this.mailer = prop
+    this.stylesService.setMailer(prop)
   }
 }
