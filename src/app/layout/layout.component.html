@@ -3,19 +3,21 @@
         <app-top-bar (Theme)="setTheme($event)"></app-top-bar>
     </div>
     <div class="down">
+        <img src="../../assets/color.png" alt="">
         <router-outlet></router-outlet>
         <div [ngClass]="{mailerOn: mailer=='on', mailerOff: mailer=='off', mailerClosed: mailer=='closed' }">
             <div class="topBar">
                 <p>avtandil.merebashvili.2@gmail.com</p>
                 <div class="buttons">
                     <button *ngIf="mailer == 'on'" (click)="setMailer('off')"><i class="fas fa-minus"></i></button>
-                    <button *ngIf="mailer == 'off'" (click)="setMailer('on')"><i class="fas fa-chevron-up"></i></button>
+                    <button *ngIf="mailer == 'off'" (click)="setMailer('on')"><i class="fas fa-caret-left"></i></button>
                     <button (click)="setMailer('closed')"><i class="fas fa-times"></i></button>
                 </div>
             </div>
             <app-send-email class="sendEmail" [textcolor]="textcolor"></app-send-email>
         </div>
     </div>
+    <div class="check"></div>
     <div class="foot">
         <i class="far fa-copyright"></i> 
         <p>{{year}} Avtandil Merebashvili - All Rights Reserved</p>

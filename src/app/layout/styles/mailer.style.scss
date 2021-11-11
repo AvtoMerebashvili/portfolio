@@ -1,8 +1,10 @@
 @mixin mailer {
     position: absolute;
-    right: 20px;
+    right: 0px;
     bottom: 63px;
-    border-radius: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
     transition: 0.5s;
     .topBar{
         width: 100%;
