@@ -20,6 +20,7 @@
             background-color: $input-bg1;
             border-radius: 20px;
             padding-left: 27px;
+            outline: none;
         }
         textarea{
             width: 75%;
@@ -48,6 +49,10 @@
                 padding: 0;
                 &:hover{
                     cursor: pointer;
+                    background-color: #1758ac;
+                }
+                &:checked{
+                    background-color: #1758ac;
                 }
             }
         }
