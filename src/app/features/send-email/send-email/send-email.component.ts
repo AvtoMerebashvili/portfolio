@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SendEmailService } from '../services/send-email.service';
 
@@ -7,9 +7,13 @@ import { SendEmailService } from '../services/send-email.service';
   templateUrl: './send-email.component.html',
   styleUrls: ['./send-email.component.scss']
 })
-export class SendEmailComponent implements OnInit {
+export class SendEmailComponent implements OnInit, OnChanges {
 
   toggled: boolean = false;
+
+  @Input() textcolor:
+        | 'white'
+        | 'black' = 'white'
 
   form = new FormGroup({
     mail: new FormControl("",[Validators.required, Validators.pattern('[a-zA-Z0-9.]+\\@[a-zA-Z0-9]+(\\.[a-zA-Z]+)+$')]),
@@ -24,6 +28,9 @@ export class SendEmailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnChanges(changes: SimpleChanges){
+    console.log(changes.textcolor.currentValue)
+  }
   onSubmit(){
     this.form.valid && this.toggled ? this.http.send(this.form.value).subscribe(v => {console.log(v)}) : alert("wrong fields")
     if(this.form.valid && this.toggled){

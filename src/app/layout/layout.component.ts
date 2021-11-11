@@ -12,8 +12,12 @@ export class LayoutComponent implements OnInit {
     return this.stylesService.mailer 
   }
 
+  get textcolor(){
+    return this.theme ? 'black' : 'white'
+  }
+
   year: number = new Date().getFullYear()
-  theme: boolean = false
+  theme: boolean = false    
 
   constructor(
     private stylesService: StylesService
