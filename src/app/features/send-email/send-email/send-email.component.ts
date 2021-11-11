@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SendEmailService } from '../services/send-email.service';
 
@@ -7,7 +7,7 @@ import { SendEmailService } from '../services/send-email.service';
   templateUrl: './send-email.component.html',
   styleUrls: ['./send-email.component.scss']
 })
-export class SendEmailComponent implements OnInit, OnChanges {
+export class SendEmailComponent implements OnInit {
 
   toggled: boolean = false;
 
@@ -28,14 +28,18 @@ export class SendEmailComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
-  ngOnChanges(changes: SimpleChanges){
-    console.log(changes.textcolor.currentValue)
-  }
   onSubmit(){
-    this.form.valid && this.toggled ? this.http.send(this.form.value).subscribe(v => {console.log(v)}) : alert("wrong fields")
-    if(this.form.valid && this.toggled){
-      alert('sent')
-    }
+    this.form.valid && this.toggled 
+      ? 
+    this.http.send(this.form.value)
+      .subscribe(
+        (response) => {
+          alert("message sent succesfully")
+        },
+        (error) => {
+          alert("message wasn't sent, try again")
+        }
+      ) : alert("wrong fields")
   }
 
   setToggle(toggled:boolean){
