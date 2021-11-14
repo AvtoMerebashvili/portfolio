@@ -13,7 +13,7 @@ app.post("/sendmail", (req, res) => {
   console.log("request came");
   let user = req.body;
   sendMail(user, info => {
-    console.log(`The mail has beed send and the id is ${info.messageId}`);
+    console.log(info)
     res.send(info);
   });
 });
@@ -31,7 +31,7 @@ async function sendMail(user, callback) {
 
   let mailOptions = {
     from: 'avtandil.merebashvili.2@gmail.com', // sender address
-    to: "tatamerebashvili049@gmail.com", // list of receivers
+    to: "avtandil.merebashvili.2@gmail.com", // list of receivers
     subject: `${user.subject}`, // Subject line
     html: `<h1>from: ${user.mail}: </h1> ${user.text}`
   };
@@ -40,3 +40,4 @@ async function sendMail(user, callback) {
   let info = await transporter.sendMail(mailOptions);
   callback(info)
 }
+
